@@ -1,0 +1,11 @@
+public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
+	//code here
+    Integer largest = num1;
+    if(largest == null || (num2 != null && num2 > largest)){
+        largest = num2;
+    }
+    if(largest == null || (num3 != null && num3 > largest)){
+        largest = num3;
+    }
+    return largest;
+}

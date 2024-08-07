@@ -4,7 +4,8 @@ public Boolean companionPlants(String plant1, String plant2) {
         'lettuce' => new List<String>{'cucumbers', 'onions'},
         'onions' => new List<String>{'lettuce', 'carrots', 'tomatoes'},
         'carrots' => new List<String>{'onions'},
-        'tomatoes' => new List<String>{'onions'}
+        'tomatoes' => new List<String>{'onions'},
+        'cucumbers' => new List<String>{'lettuce'},
     };
 
     if(companionMap.containsKey(plant1) && companionMap.get(plant1).contains(plant2)){

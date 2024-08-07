@@ -1,0 +1,16 @@
+public String aOrAn(String word) {
+    //code here
+    List<String> vowels = new List<String>{'a', 'e', 'i', 'o', 'u'};
+
+    if(String.isBlank(word)){
+        return word;
+    }else{
+        String firstChar = word.substring(0,1).toLowerCase();
+
+        if(vowels.indexOf(firstChar) >= 0){
+            return ('an ' + word);
+        }ele{
+            return ('a ' + word);
+        }
+    } 
+}

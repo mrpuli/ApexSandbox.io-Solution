@@ -1,0 +1,8 @@
+public Decimal computeTip(Decimal total, Integer percent) {
+    //code here
+    if(total == null || percent == null){
+        return 0;
+    }else{
+        return ((total * percent)/100);
+    }
+}

@@ -7,7 +7,7 @@ public String aOrAn(String word) {
     }else{
         String firstChar = word.substring(0,1).toLowerCase();
 
-        if(vowels.indexOf(firstChar) >= 0){
+        if(vowels.contains(firstChar)){
             return ('an ' + word);
         }ele{
             return ('a ' + word);

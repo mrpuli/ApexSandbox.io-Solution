@@ -1,0 +1,22 @@
+public Integer rockPaperScissors(String player1, String player2) {
+    //code here
+    List<String> validMoves = new List<String>{'rock', 'paper', 'scissors'};
+    Map<String, String> winMap = new Map<String, String>{
+        'rock' => 'paper',
+        'paper' => 'scissors',
+        'scissors' => 'rock'
+    };
+
+    if(String.isBlank(player1) || String.isBlank(player2) || player1 == player2 || !validMoves.contains(player1.toLowerCase()) || !validMoves.contains(player2.toLowerCase())){
+        return 0;
+    }
+
+    player1 = player1.toLowerCase();
+    player2 = player2.toLowerCase();
+
+    if(winMap.get(player1) == player2){
+        return 2;
+    }else{
+        return 1;
+    }
+}

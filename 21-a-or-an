@@ -9,7 +9,7 @@ public String aOrAn(String word) {
 
         if(vowels.contains(firstChar)){
             return ('an ' + word);
-        }ele{
+        }else{
             return ('a ' + word);
         }
     } 

@@ -1,0 +1,8 @@
+public String changeTimeFormat(String strTime) {
+    //code here
+    String hours = strTime.substringBefore(':');
+    Integer hoursInt = Integer.valueOf(hours);
+    Integer hours12 = Math.mod(hoursInt, 12);
+    String minutes = strTime.substringAfter(':');
+    return (hours12 + ':' + minutes);
+}

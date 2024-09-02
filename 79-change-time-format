@@ -1,10 +1,21 @@
 public String changeTimeFormat(String strTime) {
     //code here
-    String hours = strTime.substringBefore(':');
+    String hours = strTime.split(':')[0];
+    String minutes = strTime.split(':')[1];
+    String ampm;
     Integer hoursInt = Integer.valueOf(hours);
-    String ampm = (hoursInt >= 12 ? 'PM' : 'AM');
-    Integer hours12 = (hoursInt == 12 ? 12 : Math.mod(hoursInt, 12));
-    String hours12Str = (hours12 < 10 ? '0' : '') + hours12;
-    String minutes = strTime.substringAfter(':');
-    return (hours12Str + ':' + minutes + ' ' + ampm);
+    if(hoursInt < 12){
+        ampm = 'AM';
+    }else{
+        ampm = 'PM';
+    }
+    Integer hours24 = Math.mod(hoursInt, 12);
+    if(hours24 == 0 && ampm == 'AM'){
+        hours24 = 12;
+    }
+    hours = String.valueOf(hours24);
+    if(hours24 < 10){
+        hours = '0' + hours;    
+    }
+    return (hours + ':' + minutes + ' ' + ampm);
 }

@@ -10,7 +10,7 @@ public String changeTimeFormat(String strTime) {
         ampm = 'PM';
     }
     Integer hours24 = Math.mod(hoursInt, 12);
-    if(hours24 == 0 && ampm == 'AM'){
+    if((hours24 == 0 && hoursInt == 0) || (hours24 == 0 && hoursInt == 12)){
         hours24 = 12;
     }
     hours = String.valueOf(hours24);
